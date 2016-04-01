@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ShareMemProj" />
+		<Option makefile_is_custom="1" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="CMake Files\;" />
+		<Build>
+			<Target title="all">
+				<Option output="exec.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/.objs" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<MakeCommands>
+					<Build command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 all' />
+					<CompileFile command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="exec">
+				<Option output="C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/exec.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build" />
+				<Option object_output="./" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../include" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include-fixed" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include/c++" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include/c++/backward" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include/c++/mingw32" />
+				</Compiler>
+				<MakeCommands>
+					<Build command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 exec' />
+					<CompileFile command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="exec/fast">
+				<Option output="C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/exec.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build" />
+				<Option object_output="./" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../include" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include-fixed" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include/c++" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include/c++/backward" />
+					<Add directory="d:/codeblocks/mingw/bin/../lib/gcc/mingw32/4.7.1/include/c++/mingw32" />
+				</Compiler>
+				<MakeCommands>
+					<Build command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 exec/fast' />
+					<CompileFile command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<MakeCommands>
+					<Build command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 edit_cache' />
+					<CompileFile command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<MakeCommands>
+					<Build command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 rebuild_cache' />
+					<CompileFile command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='D:/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/testShareMem/ShareMemClass/build/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="../CMakeLists.txt">
+			<Option virtualFolder="CMake Files/" />
+		</Unit>
+		<Unit filename="../ShareMem.cpp">
+			<Option target="exec" />
+		</Unit>
+		<Unit filename="../ShareMem.h">
+			<Option target="exec" />
+		</Unit>
+		<Unit filename="../main.cpp">
+			<Option target="exec" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

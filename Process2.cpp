@@ -47,8 +47,8 @@ int main()
       CloseHandle(hMapFile);
       return 1;
    }
-   std::cout<<bBuf;
-   std::cout<<pBuf[0];
+   for(int i=0 ;i<3;i++)
+   std::cout<<bBuf[i];
 
    MessageBox(NULL, pBuf, TEXT("Process2"), MB_OK);
     system("pause");

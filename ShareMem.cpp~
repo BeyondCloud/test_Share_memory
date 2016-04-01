@@ -1,0 +1,8 @@
+ShareMem::ShareMem()
+{
+}
+
+void ShareMem::ptest()
+{
+    cout<<test;
+}

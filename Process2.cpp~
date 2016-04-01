@@ -48,7 +48,6 @@ int main()
       return 1;
    }
    std::cout<<bBuf[0];
-   std::cout<<pBuf[0];
 
    MessageBox(NULL, pBuf, TEXT("Process2"), MB_OK);
     system("pause");
