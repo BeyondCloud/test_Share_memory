@@ -5,8 +5,10 @@ using namespace std;
 class ShareMem
 {
     public:
-        ShareMem(void *ptr,TCHAR*,int);
-        void *pointer;
+        ShareMem();
+        void createTable(void *ptr,TCHAR*,int);
+
+
 };
 
 #endif

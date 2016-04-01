@@ -6,10 +6,10 @@
 #define BUF_SIZE 256
 TCHAR szName[]=TEXT("Global\\MyFileMappingObject");
 TCHAR szMsg[]=TEXT("Message from first process.");
-bool testBool[]={0,0,0,1,0,0,1};
+bool testBool[4096];
 int main()
 {
-   HANDLE hMapFile,hMapFile2;
+   HANDLE hMapFile;
    LPCTSTR pBuf; //pointer of string = TCHAR*
    bool* bBuf;
    hMapFile = CreateFileMapping(
@@ -32,7 +32,7 @@ int main()
                         0,
                         BUF_SIZE);
    
-   bBuf = (bool*) MapViewOfFile(hMapFile2,   // handle to map object
+   bBuf = (bool*) MapViewOfFile(hMapFile,   // handle to map object
                         FILE_MAP_ALL_ACCESS, // read/write permission
                         0,
                         0,

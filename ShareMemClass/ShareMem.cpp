@@ -5,9 +5,13 @@
 #include <conio.h>
 #include <tchar.h>
 #define BUF_SIZE 256
-ShareMem::ShareMem(void *ptr,TCHAR* Name,int size)
+ShareMem::ShareMem()
 {
-    pointer = ptr;
+
+}
+void ShareMem::createTable(void *ptr,TCHAR* Name,int size)
+{
+
     HANDLE hMapFile;
     hMapFile = CreateFileMapping(
                  INVALID_HANDLE_VALUE,    // use paging file
@@ -16,13 +20,9 @@ ShareMem::ShareMem(void *ptr,TCHAR* Name,int size)
                  0,                       // maximum object size (high-order DWORD)
                  BUF_SIZE,                // maximum object size (low-order DWORD)
                  Name);                 // name of mapping object
+
    if (hMapFile != NULL)
    {
-        pointer =  MapViewOfFile(hMapFile,   // handle to map object
-                        FILE_MAP_ALL_ACCESS, // read/write permission
-                        0,
-                        0,
-                        BUF_SIZE);
 
         void* bBuf;
         bBuf = (PVOID) MapViewOfFile(hMapFile,   // handle to map object
@@ -31,9 +31,10 @@ ShareMem::ShareMem(void *ptr,TCHAR* Name,int size)
                             0,
                             BUF_SIZE);
 
-
-        if (pointer != NULL)
-            CopyMemory(bBuf, ptr, size);
+        if (bBuf != NULL && size <=4096 )
+            CopyMemory(bBuf, ptr,size);  //size cannot exceed 4096
+        else if(size>4096)
+            cout<<"size exceed 4096";
         else
             cout<<"Could not map view of file";
 
@@ -41,8 +42,6 @@ ShareMem::ShareMem(void *ptr,TCHAR* Name,int size)
    }
         else
             cout<<"Could not open file mapping object";
-
-
 
 }
 

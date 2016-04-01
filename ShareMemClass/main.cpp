@@ -1,15 +1,17 @@
 #include "ShareMem.h"
 #include "windows.h"  //for TCHAR
+#include <iostream>
+
 using namespace std;
 TCHAR name[] = TEXT("Global\\MyFileMappingObject");
 int main()
 {
-    bool foo[3]={1,0,1},foo2[3]={0,0,0};
+    bool foo[4096],foo2[3]={0,0,0};
+    memset(foo,2,sizeof(foo));
+    ShareMem sh;
 
-    ShareMem sh(foo,name,sizeof(foo));
-
-
-	foo2[0]=(*(bool *)sh.pointer);
+    cout<< sizeof(foo);
+    sh.createTable(foo,name,sizeof(foo));
 
 	system("pause");
 }

@@ -41,7 +41,7 @@ int main()
    
    if (pBuf == NULL)
    {
-      _tprintf(TEXT("Could not map view of file (%d).\n"),
+      _tprintf(TEXT("a (%d).\n"),
              GetLastError());
 
       CloseHandle(hMapFile);
@@ -49,8 +49,7 @@ int main()
    }
    for(int i=0 ;i<3;i++)
    std::cout<<bBuf[i];
-
-   MessageBox(NULL, pBuf, TEXT("Process2"), MB_OK);
+  // MessageBox(NULL, pBuf, TEXT("Process2"), MB_OK);
     system("pause");
 
    UnmapViewOfFile(pBuf);

@@ -6,7 +6,7 @@
 #define BUF_SIZE 256
 TCHAR szName[]=TEXT("Global\\MyFileMappingObject");
 TCHAR szMsg[]=TEXT("Message from first process.");
-bool testBool[]={0,0,0,1,0,0,1};
+bool testBool[4096];
 int main()
 {
    HANDLE hMapFile;
@@ -51,7 +51,7 @@ int main()
    //copyMemory( destination , source , length)
    CopyMemory((PVOID)pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
 
-   CopyMemory((PVOID)bBuf, testBool, (sizeof(testBool)));
+   CopyMemory((PVOID)bBuf, testBool,sizeof(testBool));
    
 
    system("pause");
