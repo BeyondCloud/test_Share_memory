@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1459563333 source:c:\users\a1989\desktop\test_share_memory\sharememclass\sharemem.cpp
+	"ShareMem.h"
+	<iostream>
+	<windows.h>
+	<stdio.h>
+	<conio.h>
+	<tchar.h>
+	<iostream>
+
+1459513370 c:\users\a1989\desktop\test_share_memory\sharememclass\sharemem.h
+	<tchar.h>
+
+1459563333 source:c:\users\a1989\desktop\test_share_memory\sharememclass\main.cpp
+	"ShareMem.h"
+	"windows.h"
+	<iostream>
+

@@ -53,7 +53,6 @@ int main()
 
    CopyMemory((PVOID)bBuf, testBool,sizeof(testBool));
    
-
    system("pause");
 
    UnmapViewOfFile(pBuf);

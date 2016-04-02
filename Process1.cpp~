@@ -51,9 +51,9 @@ int main()
    //copyMemory( destination , source , length)
    CopyMemory((PVOID)pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
 
-   CopyMemory((PVOID)bBuf, testBool, (sizeof(testBool)));
+   CopyMemory((PVOID)bBuf, testBool,sizeof(testBool));
    
-
+   _getch();
    system("pause");
 
    UnmapViewOfFile(pBuf);
