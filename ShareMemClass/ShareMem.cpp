@@ -34,7 +34,7 @@ ShareMem::ShareMem(TCHAR* n)
 ShareMem::ShareMem(TCHAR* n,int size)
 {
     if(size > MAX_BUF_SIZE)
-        cout << "except smaller size (<0xFFFFF)"
+        cout << "except smaller size (<0xFFFFF)";
 
     name        = n;
     buffer_size = size;

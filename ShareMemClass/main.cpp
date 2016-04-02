@@ -12,8 +12,7 @@ int main()
     {
         foo[i]=i%2;
     }
-    ShareMem sh(name,foo,sizeof(foo));
-  //  sh.createTable(foo,sizeof(foo));
-
+    ShareMem sh(name,sizeof(foo));
+    sh.writeMem(foo);
 	system("pause");
 }
