@@ -15,7 +15,7 @@ ShareMem::ShareMem(TCHAR* n)
                     FALSE,                 // do not inherit the name
                     name);               // name of mapping object
 
-    bBuf     = (void *) MapViewOfFile(
+    bBuf     = (void *)MapViewOfFile(
                     hMapFile,   // handle to map object
                     FILE_MAP_ALL_ACCESS, // read/write permission
                     0,
@@ -33,17 +33,19 @@ ShareMem::ShareMem(TCHAR* n)
 //Create memory constructor
 ShareMem::ShareMem(TCHAR* n,int size)
 {
+    if(size > MAX_BUF_SIZE)
+        cout << "except smaller size (<0xFFFFF)"
 
     name        = n;
-    buffer_size =size;
+    buffer_size = size;
     // create a file mapping object with CreateFileMapping first
-    hMapFile    =CreateFileMapping(
-                 INVALID_HANDLE_VALUE,    // use paging file
-                 NULL,                    // default security
-                 PAGE_READWRITE,          // read/write access
-                 0,                       // maximum object size (high-order DWORD( upper 32 bit unsigned int))
-                 MAX_BUF_SIZE,                // maximum object size (low 32 bit DWORD)
-                 name);                 // name of mapping object
+    hMapFile    = CreateFileMapping(
+                  INVALID_HANDLE_VALUE,    // use paging file
+                  NULL,                    // default security
+                  PAGE_READWRITE,          // read/write access
+                  0,                       // maximum object size (high-order DWORD( upper 32 bit unsigned int))
+                  MAX_BUF_SIZE,                // maximum object size (low 32 bit DWORD)
+                  name);                 // name of mapping object
 
    if (hMapFile != NULL)
    {
