@@ -1,16 +1,13 @@
 #include "ShareMem.h"
-#include <iostream>
 #include <windows.h>
-#include <stdio.h>
-#include <conio.h>
 #include <tchar.h>
 #include <iostream>
-
 #define BUF_SIZE 0xFFFFF
+#pragma comment(lib, "user32.lib")
+
 using namespace std;
 ShareMem::ShareMem()
 {
-
 }
 void ShareMem::createTable(void *ptr,TCHAR* Name,int size)
 {
@@ -37,9 +34,7 @@ void ShareMem::createTable(void *ptr,TCHAR* Name,int size)
                             BUF_SIZE);
 
         if (bBuf != NULL)
-        {
-             CopyMemory(bBuf, ptr,307200);  //size cannot exceed 4096
-        }
+             CopyMemory(bBuf, ptr,size);
         else
             cout<<"Could not map view of file";
 
@@ -47,6 +42,44 @@ void ShareMem::createTable(void *ptr,TCHAR* Name,int size)
    }
    else
             cout<<"Could not open file mapping object";
+
+}
+
+void* ShareMem::accessTable(TCHAR* Name,int size)
+{
+       HANDLE hMapFile;
+       bool* bBuf;
+       hMapFile = OpenFileMapping(
+                       FILE_MAP_ALL_ACCESS,   // read/write access
+                       FALSE,                 // do not inherit the name
+                       Name);               // name of mapping object
+
+       if (hMapFile != NULL)
+       {
+
+
+           bBuf = (bool*) MapViewOfFile(hMapFile,   // handle to map object
+                                FILE_MAP_ALL_ACCESS, // read/write permission
+                                0,
+                                0,
+                                BUF_SIZE);
+            if(bBuf == NULL)
+            {
+                cout << "bBuf read = NULL";
+                return NULL;
+            }
+            else
+            {
+                return bBuf;
+            }
+        }
+        else
+        {
+            cout<<"Could not open file mapping object\n";
+            return NULL;
+        }
+
+
 
 }
 

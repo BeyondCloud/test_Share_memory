@@ -1,0 +1,15 @@
+#include <iostream>
+#include "ShareMem.h"
+#include <tchar.h>
+#include <window.h>
+
+TCHAR szName[]=TEXT("Global\\MyFileMappingObject");
+
+int main()
+{
+	ShareMem sh;
+	bool test[307200];
+	for(int i=0;i<307200;i++)
+		test[i] = *((bool *)(sh.accessTable(szName,307200)) + i);
+	return 0;
+}
