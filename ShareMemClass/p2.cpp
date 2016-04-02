@@ -3,16 +3,16 @@
 #include <tchar.h>
 #include "windows.h"
 
-TCHAR szName[]=TEXT("Global\\MyFileMappingObject");
+TCHAR szName[]=TEXT("bitmap");
 using namespace std;
 int main()
 {
-	ShareMem sh;
-	bool* ptr = (bool *)sh.accessTable(szName,307200);
+	ShareMem sh(szName);
+	bool* ptr = (bool *)sh.readMem();
 	bool test[307200];
 	if(ptr != NULL)
     {
-       	for(int i=0;i<307200;i++)
+       	for(int i=0;i<sh.getBufferSize();i++)
             test[i] = *(ptr + i);
         for(int i=0;i<100;i++)
             cout<<test[i];

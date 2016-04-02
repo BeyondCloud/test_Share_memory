@@ -3,7 +3,7 @@
 #include <iostream>
 
 using namespace std;
-TCHAR name[] = TEXT("Global\\MyFileMappingObject");
+TCHAR name[] = TEXT("bitmap");
 int main()
 {
 
@@ -12,8 +12,8 @@ int main()
     {
         foo[i]=i%2;
     }
-    ShareMem sh;
-    sh.createTable(foo,name,sizeof(foo));
+    ShareMem sh(name,foo,sizeof(foo));
+  //  sh.createTable(foo,sizeof(foo));
 
 	system("pause");
 }

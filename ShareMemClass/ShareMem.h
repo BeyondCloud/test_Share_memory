@@ -1,13 +1,22 @@
 #ifndef ShareMem_H
 #define ShareMem_H
 #include <tchar.h>
+#include <windows.h>
 using namespace std;
 class ShareMem
 {
     public:
-        ShareMem();
-        void createTable(void *ptr,TCHAR*,int);
-        void* accessTable(TCHAR*,int);
+        ShareMem(TCHAR*);
+        ShareMem(TCHAR*,int);
+        void     writeMem(void*);
+        void*    readMem();
+        int      getBufferSize();
+        TCHAR*   getName();
+        HANDLE hMapFile;
+        void* bBuf;
+    private:
+        int buffer_size;
+        TCHAR* name;
 
 
 };
